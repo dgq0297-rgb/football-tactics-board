@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>足球战术盘</title>
+  <link rel="icon" type="image/png" href="assets/football.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="toolbar">
+    <div class="line-switches" role="group" aria-label="有线无线">
+      <span class="switch-label">球</span>
+      <button type="button" id="ball-on" class="btn">有线</button>
+      <button type="button" id="ball-off" class="btn">无线</button>
+      <span class="switch-label">球员</span>
+      <button type="button" id="player-on" class="btn">有线</button>
+      <button type="button" id="player-off" class="btn">无线</button>
+    </div>
+    <div id="format-menu">
+      <button type="button" id="format-trigger" class="btn"></button>
+      <div id="format-dropdown" hidden></div>
+    </div>
+    <div class="actions">
+      <button type="button" id="open-tactics" class="btn">战术模拟</button>
+      <button type="button" id="open-saves" class="btn">存档</button>
+      <button type="button" id="restore" class="btn">还原</button>
+      <button type="button" id="clear" class="btn">清空</button>
+    </div>
+  </header>
+
+  <main id="stage">
+    <canvas id="board" aria-label="足球战术盘"></canvas>
+    <input id="number-input" type="text" inputmode="numeric" maxlength="2" aria-label="球员号码" hidden>
+    <div id="number-hint" hidden></div>
+  </main>
+
+  <footer id="caption-bar" hidden>
+    <p id="caption-text"></p>
+    <div class="caption-actions">
+      <button type="button" id="caption-steal" class="btn">这里断球</button>
+      <button type="button" id="caption-next" class="btn">接着选战术</button>
+      <button type="button" id="caption-replay" class="btn">重播</button>
+      <button type="button" id="caption-close" class="btn">结束</button>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
